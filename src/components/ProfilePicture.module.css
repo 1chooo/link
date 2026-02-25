@@ -1,0 +1,19 @@
+.profilePicture {
+  position: relative;
+  display: block;
+  margin: 40px auto 20px;
+  width: 96px;
+  height: 96px;
+  border: none;
+  padding: 0;
+  background: none;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.avatar {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  display: block;
+}
