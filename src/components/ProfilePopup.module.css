@@ -1,0 +1,93 @@
+.overlay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 2;
+  visibility: hidden;
+  opacity: 0;
+  overflow: hidden;
+  transition: 0.5s ease-in-out;
+}
+
+.overlayVisible {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup {
+  position: relative;
+  top: -43%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 400px;
+  width: auto;
+  height: auto;
+  margin: 56px;
+  background-color: var(--bgColor);
+  transform: scale(0);
+  transition: 0.5s ease-in-out;
+}
+
+.popupVisible {
+  transform: scale(1);
+  top: 0;
+}
+
+.popupQuote {
+  font-family: Baskerville, Georgia, serif;
+  font-style: italic;
+  color: var(--accentColor);
+  padding: 20px;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.popupPhoto {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.popupPhoto img {
+  width: 100%;
+  height: 100%;
+}
+
+.popupClose {
+  position: absolute;
+  right: -1rem;
+  top: -1rem;
+  width: 3rem;
+  height: 3rem;
+  font-size: 1.7rem;
+  font-weight: 400;
+  border-radius: 100%;
+  background-color: var(--bgColor);
+  z-index: 4;
+  color: var(--accentColor);
+  line-height: 2.7rem;
+  text-align: center;
+  cursor: pointer;
+  border: none;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+
+@media (hover: hover) {
+  .popupClose:hover {
+    background-color: var(--accentColor);
+    color: var(--bgColor);
+  }
+}
+
+.popupClose:active {
+  background-color: var(--accentColor);
+  color: var(--bgColor);
+}

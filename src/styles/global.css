@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css?family=Karla:400,700&display=swap');
+
+:root {
+  --bgColor: #223344;
+  --bgColor2: #090a0f;
+  --accentColor: #fff;
+  --font: 'Karla', sans-serif;
+  --delay: 0.3s;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  font-family: var(--font);
+  background: radial-gradient(ellipse at bottom, var(--bgColor) 0%, var(--bgColor2) 100%);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  opacity: 0;
+  animation: 1s ease-out var(--delay) 1 transitionAnimation;
+  animation-fill-mode: forwards;
+}
+
+@keyframes transitionAnimation {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes animate {
+  0% {
+    background-position: -500%;
+  }
+  100% {
+    background-position: 500%;
+  }
+}
+
+@keyframes animStar {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-2000px);
+  }
+}
