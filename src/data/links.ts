@@ -17,7 +17,7 @@ export const links: LinkItem[] = [
 ]
 
 export const profile = {
-  name: 'Hugo (Chun-Ho) Lin',
+  name: 'Hugo Lin',
   bio: 'CS @ USC | Making 1chooo.com more fun',
   avatarUrl: 'https://github.com/1chooo.png',
   faviconUrl: 'https://avatars.githubusercontent.com/u/94162591?v=4',
