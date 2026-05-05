@@ -52,9 +52,9 @@
 .popupQuote {
   font-family: var(--serif), Baskerville, Georgia, Cambria, 'Times New Roman',
     Times, serif;
-  font-style: initial;
+  font-style: italic;
   font-optical-sizing: auto;
-  font-variation-settings: 'wght' 480, var(--sans-variation);
+  font-variation-settings: 'wght' 480;
   font-weight: 400;
   font-variant-ligatures: contextual;
   letter-spacing: -0.006em;

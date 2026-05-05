@@ -3,10 +3,17 @@
   padding-top: 1.25rem;
   padding-bottom: 0.5rem;
   color: var(--color-muted-foreground);
-  font-size: 0.8125rem;
-  font-variation-settings: 'wght' 440, var(--sans-variation);
+  font-family: var(--serif), Baskerville, Georgia, Cambria, 'Times New Roman',
+    Times, serif;
+  font-style: italic;
+  font-optical-sizing: auto;
+  font-size: 0.875rem;
+  font-variation-settings: 'wght' 480;
+  font-weight: 400;
+  font-variant-ligatures: contextual;
   width: 100%;
   text-align: center;
   line-height: 1.5;
-  letter-spacing: 0.02em;
+  letter-spacing: -0.006em;
+  word-spacing: 0.08em;
 }
