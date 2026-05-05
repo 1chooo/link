@@ -1,10 +1,9 @@
 ---
 import { profile } from '../data/links'
-import styles from './ProfilePicture.module.css'
 ---
 
 <button
-  class={styles.profilePicture}
+  class="relative mx-auto mb-4 block size-24 cursor-pointer rounded-full border-0 bg-transparent p-0 shadow-[0_0_0_1px_var(--color-border),0_2px_12px_rgba(46,49,53,0.08)] transition-shadow duration-150 ease-in [-webkit-tap-highlight-color:transparent] hover:shadow-[0_0_0_1px_var(--color-rurikon-300),0_4px_16px_rgba(46,49,53,0.12)] focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-primary"
   type="button"
   aria-label="View full profile picture"
   data-profile-open
@@ -12,7 +11,7 @@ import styles from './ProfilePicture.module.css'
   <img
     src={profile.avatarUrl}
     alt={`${profile.name} profile picture`}
-    class={styles.avatar}
+    class="block size-24 rounded-full"
     width="96"
     height="96"
   />

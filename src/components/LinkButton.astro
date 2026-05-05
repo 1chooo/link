@@ -1,7 +1,6 @@
 ---
 import type { LinkItem } from '../data/links'
 import Icon from './Icon.astro'
-import styles from './LinkButton.module.css'
 
 interface Props {
   link: LinkItem
@@ -11,11 +10,11 @@ const { link } = Astro.props
 ---
 
 <a
-  class={styles.link}
+  class="font-link-serif relative mb-2.5 block rounded-[var(--radius)] border border-border bg-card px-4 py-3 text-center text-[0.9375rem] leading-[1.45] font-normal text-card-foreground no-underline shadow-[0_1px_2px_rgba(46,49,53,0.04)] transition-[background-color,color,border-color,box-shadow] duration-150 ease-in [-webkit-tap-highlight-color:transparent] hover:border-rurikon-200 hover:bg-secondary hover:text-secondary-foreground hover:shadow-[0_2px_8px_rgba(46,49,53,0.08)] active:bg-muted active:text-primary"
   href={link.url}
   target="_blank"
   rel="noopener noreferrer"
 >
-  <Icon name={link.icon} class={styles.icon} />
+  <Icon name={link.icon} class="mr-[0.35rem] inline-block size-[1em] align-middle" />
   {link.label}
 </a>

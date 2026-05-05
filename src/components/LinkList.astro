@@ -1,9 +1,8 @@
 ---
 import { links } from '../data/links'
 import LinkButton from './LinkButton.astro'
-import styles from './LinkList.module.css'
 ---
 
-<nav class={styles.links} aria-label="Social links">
+<nav class="mx-auto mt-6 block w-full max-w-[675px]" aria-label="Social links">
   {links.map((link) => <LinkButton link={link} />)}
 </nav>

@@ -1,3 +1,5 @@
+@import 'tailwindcss';
+
 /* Same font files as 1chooo.com (app/_fonts), served from /public/fonts */
 
 @font-face {
@@ -16,14 +18,21 @@
   src: url('/fonts/LoraItalicVariable.woff2') format('woff2');
 }
 
-/* Mirrors 1chooo.com light theme tokens (app/globals.css @theme inline + body) */
+/* Mirrors 1chooo.com text rendering and page transition defaults. */
 :root {
   --sans-variation: 'opsz' 32;
   --font-features: 'cpsp' 1, 'cv01', 'cv03', 'cv04', 'calt', 'ss03', 'liga',
     'ordn';
 
-  --sans: Inter;
-  --serif: Lora;
+  --radius: 0.5rem;
+  --delay: 0.3s;
+}
+
+@theme {
+  --font-sans: Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  --font-serif: Lora, Baskerville, Georgia, Cambria, 'Times New Roman', Times,
+    serif;
 
   --color-rurikon-200: #b3b9c1;
   --color-rurikon-300: #8c95a1;
@@ -42,57 +51,48 @@
   --color-muted: #ebedef;
   --color-muted-foreground: #697381;
   --color-border: #d8dbdfb3;
-  --radius: 0.5rem;
-
-  --delay: 0.3s;
 }
 
-*,
-*::before,
-*::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+@layer base {
+  html {
+    color-scheme: only light;
+  }
+
+  body {
+    min-height: 100vh;
+    font-synthesis: none;
+    font-family: var(--font-sans);
+    font-feature-settings: var(--font-features);
+    font-variation-settings: 'wght' 440, var(--sans-variation);
+    font-variant: common-ligatures contextual;
+    text-decoration-skip-ink: auto;
+    text-spacing-trim: space-first;
+    font-optical-sizing: auto;
+    letter-spacing: 0.0085em;
+    word-spacing: -0.04em;
+    background-color: var(--color-background);
+    color: var(--color-rurikon-500);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: geometricPrecision;
+    position: relative;
+    opacity: 0;
+    animation: 1s ease-out var(--delay) 1 transitionAnimation;
+    animation-fill-mode: forwards;
+  }
+
+  *::selection {
+    background: #95a5ac40;
+    color: #485a74;
+  }
 }
 
-html {
-  color-scheme: only light;
-}
-
-body {
-  min-height: 100vh;
-  font-synthesis: none;
-  font-family: var(--sans), system-ui, -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue',
-    sans-serif;
-  font-feature-settings: var(--font-features);
-  font-variation-settings: 'wght' 440, var(--sans-variation);
-  font-variant: common-ligatures contextual;
-  text-decoration-skip-ink: auto;
-  text-spacing-trim: space-first;
+@utility font-link-serif {
+  font-family: var(--font-serif);
+  font-style: italic;
   font-optical-sizing: auto;
-  letter-spacing: 0.0085em;
-  word-spacing: -0.04em;
-  background-color: var(--color-background);
-  color: var(--color-rurikon-500);
-  -webkit-font-smoothing: antialiased;
-  text-rendering: geometricPrecision;
-  position: relative;
-  opacity: 0;
-  animation: 1s ease-out var(--delay) 1 transitionAnimation;
-  animation-fill-mode: forwards;
-}
-
-main {
-  max-width: 28rem;
-  width: 100%;
-  margin: 0 auto;
-  min-height: 100vh;
-  min-height: 100svh;
-  padding: 1.5rem clamp(1rem, 4vw, 1.75rem) 2rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  font-variation-settings: 'wght' 480;
+  font-variant-ligatures: contextual;
+  letter-spacing: -0.006em;
 }
 
 @keyframes transitionAnimation {
@@ -104,9 +104,4 @@ main {
     opacity: 1;
     transform: translateY(0);
   }
-}
-
-*::selection {
-  background: #95a5ac40;
-  color: #485a74;
 }
