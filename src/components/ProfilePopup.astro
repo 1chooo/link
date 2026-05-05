@@ -1,0 +1,58 @@
+---
+import { profile } from '../data/links'
+import styles from './ProfilePopup.module.css'
+---
+
+<div
+  class={styles.overlay}
+  role="dialog"
+  aria-modal="true"
+  aria-label="Profile picture popup"
+  aria-hidden="true"
+  data-profile-popup
+>
+  <div class={styles.popup} data-profile-popup-card>
+    <div class={styles.popupPhoto}>
+      <a href={profile.avatarUrl} target="_blank" rel="noopener noreferrer">
+        <img src={profile.avatarUrl} alt={`${profile.name} full profile`} />
+      </a>
+    </div>
+    <div class={styles.popupQuote}>{profile.popupQuote}</div>
+    <button
+      class={styles.popupClose}
+      type="button"
+      aria-label="Close popup"
+      data-profile-close
+    >
+      &times;
+    </button>
+  </div>
+</div>
+
+<script define:vars={{ overlayVisible: styles.overlayVisible, popupVisible: styles.popupVisible }}>
+  const popup = document.querySelector('[data-profile-popup]')
+  const popupCard = document.querySelector('[data-profile-popup-card]')
+  const openButton = document.querySelector('[data-profile-open]')
+  const closeButton = document.querySelector('[data-profile-close]')
+
+  const openPopup = () => {
+    popup?.classList.add(overlayVisible)
+    popupCard?.classList.add(popupVisible)
+    popup?.setAttribute('aria-hidden', 'false')
+  }
+
+  const closePopup = () => {
+    popup?.classList.remove(overlayVisible)
+    popupCard?.classList.remove(popupVisible)
+    popup?.setAttribute('aria-hidden', 'true')
+  }
+
+  openButton?.addEventListener('click', openPopup)
+  closeButton?.addEventListener('click', closePopup)
+  popup?.addEventListener('click', closePopup)
+  popupCard?.addEventListener('click', (event) => event.stopPropagation())
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') closePopup()
+  })
+</script>

@@ -19,7 +19,8 @@
 /* Mirrors 1chooo.com light theme tokens (app/globals.css @theme inline + body) */
 :root {
   --sans-variation: 'opsz' 32;
-  --font-features: 'cpsp' 1, 'cv01', 'cv03', 'cv04', 'calt', 'ss03', 'liga', 'ordn';
+  --font-features: 'cpsp' 1, 'cv01', 'cv03', 'cv04', 'calt', 'ss03', 'liga',
+    'ordn';
 
   --sans: Inter;
   --serif: Lora;

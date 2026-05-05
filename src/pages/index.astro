@@ -1,0 +1,44 @@
+---
+import ProfilePicture from '../components/ProfilePicture.astro'
+import ProfilePopup from '../components/ProfilePopup.astro'
+import UserInfo from '../components/UserInfo.astro'
+import LinkList from '../components/LinkList.astro'
+import Tagline from '../components/Tagline.astro'
+import { profile } from '../data/links'
+import '../styles/global.css'
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1"
+    />
+    <meta name="color-scheme" content="only light" />
+    <meta name="theme-color" content="#d8dbdfb3" />
+    <title>Hugo ChunHo Lin | Linktree</title>
+    <link
+      rel="preload"
+      href="/fonts/InterVariable.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="icon"
+      href={profile.faviconUrl}
+      type="image/x-icon"
+    />
+  </head>
+  <body>
+    <main>
+      <ProfilePicture />
+      <ProfilePopup />
+      <UserInfo />
+      <LinkList />
+      <Tagline />
+    </main>
+  </body>
+</html>

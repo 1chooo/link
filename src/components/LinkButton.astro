@@ -1,0 +1,21 @@
+---
+import type { LinkItem } from '../data/links'
+import Icon from './Icon.astro'
+import styles from './LinkButton.module.css'
+
+interface Props {
+  link: LinkItem
+}
+
+const { link } = Astro.props
+---
+
+<a
+  class={styles.link}
+  href={link.url}
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  <Icon name={link.icon} class={styles.icon} />
+  {link.label}
+</a>

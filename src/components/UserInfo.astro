@@ -1,0 +1,9 @@
+---
+import { profile } from '../data/links'
+import styles from './UserInfo.module.css'
+---
+
+<div class={styles.userName}>
+  <h3>{profile.name}</h3>
+  <p class={styles.bio}>{profile.bio}</p>
+</div>

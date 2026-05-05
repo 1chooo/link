@@ -1,0 +1,19 @@
+---
+import { profile } from '../data/links'
+import styles from './ProfilePicture.module.css'
+---
+
+<button
+  class={styles.profilePicture}
+  type="button"
+  aria-label="View full profile picture"
+  data-profile-open
+>
+  <img
+    src={profile.avatarUrl}
+    alt={`${profile.name} profile picture`}
+    class={styles.avatar}
+    width="96"
+    height="96"
+  />
+</button>
