@@ -29,6 +29,6 @@ export const profile = {
   name: 'Hugo ChunHo Lin',
   bio: 'AWS Educate Cloud Ambassador | Ex SWE Intern at PEGATRON CORP. | ATM, CS at NCU | @NCUAppTeam',
   avatarUrl: 'https://avatars.githubusercontent.com/u/94162591?v=4',
-  tagline: `'' \u{1D63F}\u{1D667}\u{1D65A}\u{1D65E}\u{1D664}\u{1D668} \u{1D658}\u{1D666}\u{1D664}\u{1D65A} \u{1D669}\u{1D667}\u{1D66A}\u{1D65A}, \u{1D66C}\u{1D661}\u{1D65A}\u{1D665} \u{1FAF5}\u{1F3FB} \u{1D659}\u{1D666}\u{1D665}'\u{1D669} \u{1D668}\u{1D663}\u{1D65A}\u{1D65A}\u{1D667}\u{2026} ''`,
-  popupQuote: `'' \u{1D63F}\u{1D667}\u{1D65A}\u{1D65E}\u{1D664}\u{1D668} \u{1D658}\u{1D666}\u{1D664}\u{1D65A} \u{1D669}\u{1D667}\u{1D66A}\u{1D65A}, \u{1D66C}\u{1D661}\u{1D65A}\u{1D665} \u{1D66A} \u{1D659}\u{1D666}\u{1D665}'\u{1D669} \u{1D668}\u{1D663}\u{1D65A}\u{1D65A}\u{1D667}\u{2026} ''`,
+  tagline: `"You are too focused on the future without realizing that today is exactly what you prayed for years ago."`,
+  popupQuote: `"You are too focused on the future without realizing that today is exactly what you prayed for years ago."`,
 }

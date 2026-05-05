@@ -1,0 +1,23 @@
+.userName {
+  color: var(--color-rurikon-700);
+  font-size: 0.9375rem;
+  line-height: 1.5;
+  width: 100%;
+  text-align: center;
+}
+
+.userName h3 {
+  font-size: 1.125rem;
+  font-variation-settings: 'wght' 640, var(--sans-variation);
+  color: var(--color-foreground);
+  margin-bottom: 0.35rem;
+  letter-spacing: 0.006em;
+}
+
+.bio {
+  font-variation-settings: 'wght' 440, var(--sans-variation);
+  color: var(--color-muted-foreground);
+  max-width: 36ch;
+  margin-left: auto;
+  margin-right: auto;
+}

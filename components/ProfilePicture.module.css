@@ -1,0 +1,37 @@
+.profilePicture {
+  position: relative;
+  display: block;
+  margin: 2rem auto 1rem;
+  width: 96px;
+  height: 96px;
+  border: none;
+  padding: 0;
+  background: none;
+  cursor: pointer;
+  border-radius: 50%;
+  box-shadow:
+    0 0 0 1px var(--color-border),
+    0 2px 12px rgba(46, 49, 53, 0.08);
+  -webkit-tap-highlight-color: transparent;
+  transition: box-shadow 0.15s ease;
+}
+
+@media (hover: hover) {
+  .profilePicture:hover {
+    box-shadow:
+      0 0 0 1px var(--color-rurikon-300),
+      0 4px 16px rgba(46, 49, 53, 0.12);
+  }
+}
+
+.profilePicture:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 3px;
+}
+
+.avatar {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  display: block;
+}

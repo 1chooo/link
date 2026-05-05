@@ -5,7 +5,7 @@ export default function UserInfo() {
   return (
     <div className={styles.userName}>
       <h3>{profile.name}</h3>
-      {profile.bio}
+      <p className={styles.bio}>{profile.bio}</p>
     </div>
   )
 }

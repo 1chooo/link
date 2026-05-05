@@ -1,0 +1,12 @@
+.tagline {
+  position: relative;
+  padding-top: 1.25rem;
+  padding-bottom: 0.5rem;
+  color: var(--color-muted-foreground);
+  font-size: 0.8125rem;
+  font-variation-settings: 'wght' 440, var(--sans-variation);
+  width: 100%;
+  text-align: center;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+}

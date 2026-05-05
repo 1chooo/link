@@ -1,0 +1,138 @@
+/* Same font files as 1chooo.com (app/_fonts), served from /public/fonts */
+
+@font-face {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url('/fonts/InterVariable.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: Lora;
+  font-style: italic;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url('/fonts/LoraItalicVariable.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: IosevkaFixedCurly;
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url('/fonts/IosevkaFixedCurly-ExtendedMedium.woff2') format('woff2');
+}
+
+/* Mirrors 1chooo.com light theme tokens (app/globals.css @theme inline + body) */
+:root {
+  --sans-variation: 'opsz' 32;
+  --font-features: 'cpsp' 1, 'cv01', 'cv03', 'cv04', 'calt', 'ss03', 'liga', 'ordn';
+
+  --sans: Inter;
+  --serif: Lora;
+  --mono: IosevkaFixedCurly;
+
+  --font-sans: var(--sans), -apple-system, ui-sans-serif, system-ui, sans-serif,
+    'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  --font-serif: var(--serif), ui-serif, Georgia, Cambria, 'Times New Roman', Times,
+    serif;
+  --font-mono: var(--mono), ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    'Liberation Mono', 'Courier New', monospace;
+
+  --color-rurikon-50: #ebedef;
+  --color-rurikon-100: #d8dbdf;
+  --color-rurikon-200: #b3b9c1;
+  --color-rurikon-300: #8c95a1;
+  --color-rurikon-400: #697381;
+  --color-rurikon-500: #4a515b;
+  --color-rurikon-600: #3b4149;
+  --color-rurikon-700: #2b3035;
+  --color-rurikon-800: #1e2125;
+  --color-rurikon-900: #0e0f11;
+
+  --color-rurikon-border: #d8dbdfb3;
+
+  --color-background: #fcfcfc;
+  --color-foreground: #1e2125;
+  --color-card: #fcfcfc;
+  --color-card-foreground: #1e2125;
+  --color-primary: #2b3035;
+  --color-primary-foreground: #ebedef;
+  --color-secondary: #ebedef;
+  --color-secondary-foreground: #2b3035;
+  --color-muted: #ebedef;
+  --color-muted-foreground: #697381;
+  --color-border: #d8dbdfb3;
+  --radius: 0.5rem;
+
+  --delay: 0.3s;
+
+  --bgColor: var(--color-background);
+  --accentColor: var(--color-primary);
+  --font: var(--font-sans);
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  color-scheme: only light;
+}
+
+body {
+  min-height: 100vh;
+  font-synthesis: none;
+  font-family: var(--sans), system-ui, -apple-system, BlinkMacSystemFont,
+    'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue',
+    sans-serif;
+  font-feature-settings: var(--font-features);
+  font-variation-settings: 'wght' 440, var(--sans-variation);
+  font-variant: common-ligatures contextual;
+  text-decoration-skip-ink: auto;
+  text-spacing-trim: space-first;
+  font-optical-sizing: auto;
+  letter-spacing: 0.0085em;
+  word-spacing: -0.04em;
+  background-color: var(--color-background);
+  color: var(--color-rurikon-500);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: geometricPrecision;
+  position: relative;
+  opacity: 0;
+  animation: 1s ease-out var(--delay) 1 transitionAnimation;
+  animation-fill-mode: forwards;
+}
+
+code {
+  font-family: var(--font-mono);
+  word-spacing: -0.15em;
+}
+
+main {
+  max-width: 28rem;
+  width: 100%;
+  margin: 0 auto;
+  padding: 1.5rem clamp(1rem, 4vw, 1.75rem) 2rem;
+}
+
+@keyframes transitionAnimation {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+*::selection {
+  background: #95a5ac40;
+  color: #485a74;
+}
